@@ -8,7 +8,7 @@ This gallery showcases the **canonical armor, faces, and shine of the Robo-Knigh
 ## 📸 Canonical Shine & Faces
 
 ### Young/Old Robo-Knight Face
-This is the **most beautiful AI-generated Robo-Knight face and armor shine**:
+This is the ** AI-generated Robo-Knight face and armor shine **:
 
 <img 
     src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Demos/main/Direct%20X%20Standard%20C/Mercwar_Robo-Knight/SHINE/mercwar01_new_Technology.png" 
