@@ -161,7 +161,7 @@ This is the ** AI-generated Robo-Knight face and armor shine **:
 ---
 
 <img 
-    src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/main/Version%201/Demonizer-CVBGOD-Cyborg.png" 
+    src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/main/Version%201/Copilot_20260119_213158.png" 
     alt="Robo-Knight Canonical Shine" 
     style="max-width:100%; height:auto;"
 />
