@@ -10,14 +10,16 @@ This gallery showcases the **canonical armor, faces, and shine of the Robo-Knigh
     alt="Robo-Knight Canonical Shine" 
     style="max-width:100%; height:auto;"
 />
+- **Old eyes:** Smile, still full shine
+---
 <img 
     src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/main/Version%201/Demonizer-CVBGOD-Cyborg.png" 
     alt="Robo-Knight Canonical Shine" 
     style="max-width:100%; height:auto;"
 />
-
-- **Old eyes:** Smile, still full shine
+- **Cyborg Robot Eyes:** Smile, Grin full shine
 ---
+
 
 ## 🏛️ Purpose of the Gallery
 
