@@ -11,7 +11,6 @@ This gallery showcases the **canonical armor, faces, and shine of the Robo-Knigh
     style="max-width:100%; height:auto;"
 />
 
-
 - **Old eyes:** Smile, still full shine
 ---
 
@@ -32,7 +31,12 @@ version 1
 © 2026 Mercwar. All Rights Reserved.
 
 ---
-
+<img 
+    src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/main/Version%201/Demonizer-Cyborg.png" 
+    alt="Robo-Knight Canonical Shine" 
+    style="max-width:100%; height:auto;"
+/>
+--
 ## OWNERSHIP
 
 All content contained within this repository and its subdirectories, including but not limited to:
