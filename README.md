@@ -10,6 +10,11 @@ This gallery showcases the **canonical armor, faces, and shine of the Robo-Knigh
     alt="Robo-Knight Canonical Shine" 
     style="max-width:100%; height:auto;"
 />
+<img 
+    src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/main/Version%201/Demonizer-CVBGOD-Cyborg.png" 
+    alt="Robo-Knight Canonical Shine" 
+    style="max-width:100%; height:auto;"
+/>
 
 - **Old eyes:** Smile, still full shine
 ---
@@ -145,9 +150,20 @@ This is the ** AI-generated Robo-Knight face and armor shine **:
     alt="Robo-Knight Canonical Shine" 
     style="max-width:100%; height:auto;"
 />
+--
 - **Young Face:** Pristine, mirror-polished reflections  
 - **Old Eyes:** Subtle wear, still full shine  
 - **Visor Geometry:** Lifted, with perfectly aligned chin and mouth guard  
 - **Armor Construction:** Fully segmented, with photorealistic highlights and calibrated metallic behavior  
 - **Creative Status:** Robo‑Knight is a protected creative work  
+---
+
+<img 
+    src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/main/Version%201/Demonizer-CVBGOD-Cyborg.png" 
+    alt="Robo-Knight Canonical Shine" 
+    style="max-width:100%; height:auto;"
+/>
+--
+- **Robot Face:** Pristine, mirror-polished reflections  
 - 🎖️ **Version 1.0 is canonical and immutable**
+---
