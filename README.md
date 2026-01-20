@@ -17,7 +17,7 @@ This gallery showcases the **canonical armor, faces, and shine of the Robo-Knigh
     alt="Robo-Knight Canonical Shine" 
     style="max-width:100%; height:auto;"
 />
-- **Cyborg Robot Eyes:** Smile, Grin full shine
+- **Cyborg Robot Eyes:** Grin, full shine
 ---
 
 
