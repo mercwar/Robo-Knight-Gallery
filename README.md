@@ -3,7 +3,6 @@
 Welcome to the **official Robo-Knight Gallery**!  
 This gallery showcases the **canonical armor, faces, and shine of the Robo-Knight project**.
 
----
 
 ## 📸 Canonical Shine & Faces
 <img 
@@ -13,11 +12,7 @@ This gallery showcases the **canonical armor, faces, and shine of the Robo-Knigh
 />
 
 
-- **Young Face:** pristine, mirror-polished reflections
-- **Old Face:** subtle wear, still full shine
-- Lifted visor, perfectly aligned chin/mouth guard
-- Fully segmented armor with photorealistic highlights
-
+- **Old eyes:** Smile, still full shine
 ---
 
 ## 🏛️ Purpose of the Gallery
@@ -146,5 +141,9 @@ This is the ** AI-generated Robo-Knight face and armor shine **:
     alt="Robo-Knight Canonical Shine" 
     style="max-width:100%; height:auto;"
 />
-**Robo-Knight is a protected creative work.  
-Version 1 is canonical and immutable.**
+- **Young Face:** Pristine, mirror-polished reflections  
+- **Old Eyes:** Subtle wear, still full shine  
+- **Visor Geometry:** Lifted, with perfectly aligned chin and mouth guard  
+- **Armor Construction:** Fully segmented, with photorealistic highlights and calibrated metallic behavior  
+- **Creative Status:** Robo‑Knight is a protected creative work  
+- 🎖️ **Version 1.0 is canonical and immutable**
