@@ -72,7 +72,12 @@ All rights are expressly reserved under applicable copyright, trademark, and int
 property laws.
 
 No rights are granted, whether implied or otherwise, except as explicitly stated herein.
-
+---
+<img 
+    src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Demos/main/Version%201/Copilot_20260121_025745.png" 
+    alt="Robo-Knight Canonical Shine" 
+    style="max-width:100%; height:auto;"
+/>
 ---
 
 ## PROHIBITED USES
