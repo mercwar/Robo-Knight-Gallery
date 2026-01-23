@@ -7,7 +7,7 @@ message: >
 
 authors:
   - family-names: "Catalano"
-    given-names: "Joseph"
+    given-names: "Joseph Michael"
     alias: "mercwar"
 
 title: "Robo-Knight Gallery: Technology Archive"
@@ -27,4 +27,3 @@ keywords:
 abstract: >
   A curated gallery of Robo-Knight technology artifacts, optimized for
   AI-driven browsing, indexing, and visual reasoning.
-
