@@ -1,0 +1,16 @@
+/* AIFVS-ARTIFACT
+   CY_NAME: ROBO_KNIGHT_GALLERY
+   CY_TYPE: technology_archive
+   CY_ROLE: Historical Robo-Knight Preservation Layer
+   CY_OWNER: Joseph Michael Catalano
+   CY_DOMAIN: Robo-Knight Lineage Framework
+
+   RK_GEN: ARCHIVE
+   RK_LAW: CANONICAL_PRESERVATION
+   CY_VISIBILITY: PUBLIC_CRAWLABLE_INDEXED
+
+   COMMENT:
+      The Robo-Knight Gallery is a curated archive documenting the
+      evolution of Robo-Knight technology. All artifacts must preserve
+      lineage, geometry, and historical accuracy.
+*/
