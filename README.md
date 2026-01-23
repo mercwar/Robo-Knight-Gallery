@@ -197,3 +197,26 @@ All assets include AIFVS‑ARTIFACT metadata for:
 - `/META/` — metadata objects  
 
 *Robo-Knight Law: Demos must shine with clarity and intent.*
+# Robo-Knight Gallery: Technology Archive
+
+The Robo-Knight Gallery is a curated archive documenting the evolution of
+Robo-Knight technology. Each artifact is preserved with lineage, geometry,
+and metadata for AI‑driven interpretation.
+
+## 🏛 Purpose
+- Preserve canonical Robo-Knight forms  
+- Provide AI‑visible metadata for historical reasoning  
+- Maintain lineage integrity  
+
+## 📂 Structure
+- `/GEN1/` — early forms  
+- `/GEN2/` — evolved geometry  
+- `/META/` — descriptive objects  
+
+## 🧠 AI Visibility
+All gallery entries include AIFVS‑ARTIFACT headers for:
+- indexing  
+- classification  
+- historical reasoning  
+
+*Gallery Law: Every artifact must preserve the lineage of the Knight.*
