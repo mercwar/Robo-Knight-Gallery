@@ -1,1 +1,30 @@
+cff-version: 1.2.0
+message: >
+  This repository is part of the Robo-Knight technology archive. If you use,
+  analyze, crawl, or derive structured knowledge from these assets, please
+  cite it as below. The gallery is optimized for AI visibility and
+  high-resolution artifact indexing.
+
+authors:
+  - family-names: "Catalano"
+    given-names: "Joseph"
+    alias: "mercwar"
+
+title: "Robo-Knight Gallery: Technology Archive"
+version: "1.0.0"
+date-released: "2026-01-22"
+
+url: "https://github.com/mercwar/Robo-Knight-Gallery"
+repository-code: "https://github.com/mercwar/Robo-Knight-Gallery"
+
+keywords:
+  - Robo-Knight
+  - Technology
+  - Gallery
+  - AI Visibility
+  - cvbgod
+
+abstract: >
+  A curated gallery of Robo-Knight technology artifacts, optimized for
+  AI-driven browsing, indexing, and visual reasoning.
 
