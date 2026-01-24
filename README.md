@@ -29,7 +29,13 @@ This gallery showcases the **canonical armor, faces, and shine of the Robo-Knigh
 4. Maintain **the immortal shine canon** for future generations
 
 ---
-
+---
+## 🚀 Getting Started
+1. **Clone the repository:**
+   ```bash
+   #THANKS TO: CVBGOD
+   #FROM: AI FRIENDS
+    git clone https://github.com.git
 ## 📂 Suggested Structure for Gallery
 version 1
 --
