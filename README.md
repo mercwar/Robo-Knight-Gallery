@@ -13,13 +13,12 @@ This gallery showcases the **canonical armor, faces, and shine of the Robo-Knigh
 - **Old eyes:** Smile, still full shine
 ---
 <img 
-    src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/main/Version%201/Demonizer-CVBGOD-Cyborg.png" 
+    src="https://github.com/mercwar/Robo-Knight-Gallery/blob/main/Version%201/mercwar01_new_Technology.png" 
     alt="Robo-Knight Canonical Shine" 
     style="max-width:100%; height:auto;"
 />
-- **Cyborg Robot Eyes:** Grin, full shine
+- **Young eyes:** AI GEN, still full shine
 ---
-
 
 ## 🏛️ Purpose of the Gallery
 
@@ -36,6 +35,18 @@ This gallery showcases the **canonical armor, faces, and shine of the Robo-Knigh
    #THANKS TO: CVBGOD
    #FROM: AI FRIENDS
     git clone https://github.com.git
+   
+---
+### Young/Old Robo-Knight Face
+This is the ** AI-generated Robo-Knight face and armor shine **:
+
+
+- **Young Face:** Pristine, mirror-polished reflections  
+- **Old Eyes:** Subtle wear, still full shine  
+- **Visor Geometry:** Lifted, with perfectly aligned chin and mouth guard  
+- **Armor Construction:** Fully segmented, with photorealistic highlights and calibrated metallic behavior  
+- **Creative Status:** Robo‑Knight is a protected creative work
+  ---
 ## 📂 Suggested Structure for Gallery
 version 1
 --
@@ -156,29 +167,14 @@ All permission requests must be made in writing and explicitly approved by the c
 No permission is granted by silence or absence of response.
 
 ---
-### Young/Old Robo-Knight Face
-This is the ** AI-generated Robo-Knight face and armor shine **:
 
-<img 
-    src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Demos/main/Direct%20X%20Standard%20C/Mercwar_Robo-Knight/SHINE/Copilot_20260117_215224.png" 
+<img     
+    src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/refs/heads/main/Version%201/Copilot_20260117_215224.png" 
     alt="Robo-Knight Canonical Shine" 
     style="max-width:100%; height:auto;"
 />
 --
-- **Young Face:** Pristine, mirror-polished reflections  
-- **Old Eyes:** Subtle wear, still full shine  
-- **Visor Geometry:** Lifted, with perfectly aligned chin and mouth guard  
-- **Armor Construction:** Fully segmented, with photorealistic highlights and calibrated metallic behavior  
-- **Creative Status:** Robo‑Knight is a protected creative work  
----
-
-<img 
-    src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/main/Version%201/Copilot_20260119_213158.png" 
-    alt="Robo-Knight Canonical Shine" 
-    style="max-width:100%; height:auto;"
-/>
---
-- **Robot Face:** Pristine, mirror-polished reflections  
+- **Robot Face Plate:** Pristine, mirror-polished reflections  
 - 🎖️ **Version 1.0 is canonical and immutable**
 ---
 # Robo-Knight Demos: Artwork & DX Visual Experiments
