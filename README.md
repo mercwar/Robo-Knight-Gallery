@@ -80,10 +80,11 @@ property laws.
 No rights are granted, whether implied or otherwise, except as explicitly stated herein.
 ---
 <img 
-    src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Demos/main/Version%201/Copilot_20260121_025745.png" 
+    src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/main/Version%201/Copilot_20260121_025745.png" 
     alt="Robo-Knight Canonical Shine" 
     style="max-width:100%; height:auto;"
 />
+
 ---
 
 ## PROHIBITED USES
@@ -159,7 +160,7 @@ No permission is granted by silence or absence of response.
 This is the ** AI-generated Robo-Knight face and armor shine **:
 
 <img 
-    src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Demos/main/Direct%20X%20Standard%20C/Mercwar_Robo-Knight/SHINE/mercwar01_new_Technology.png" 
+    src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Demos/main/Direct%20X%20Standard%20C/Mercwar_Robo-Knight/SHINE/Copilot_20260117_215224.png" 
     alt="Robo-Knight Canonical Shine" 
     style="max-width:100%; height:auto;"
 />
