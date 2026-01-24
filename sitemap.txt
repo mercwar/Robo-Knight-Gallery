@@ -1,0 +1,66 @@
+.
+./sitemap.txt
+./Version 1
+./Version 1/Demonizer.png
+./Version 1/Copilot_20260119_213203.png
+./Version 1/Copilot_20260119_215942.png
+./Version 1/Copilot_20260119_220154.png
+./Version 1/ChatGPT Image Jan 19, 2026, 08_15_40 PM.png
+./Version 1/Copilot_20260117_235015.png
+./Version 1/Copilot_20260118_002244.png
+./Version 1/Copilot_20260119_213201.png
+./Version 1/ChatGPT Image Jan 19, 2026, 07_43_46 PM.png
+./Version 1/Copilot_20260117_215224.png
+./Version 1/Copilot_20260117_215207.png
+./Version 1/Copilot_20260118_000511.png
+./Version 1/Copilot_20260118_000336.png
+./Version 1/Copilot_20260119_193420.png
+./Version 1/ChatGPT Image Jan 19, 2026, 08_16_03 PM.png
+./Version 1/Copilot_20260119_221019.png
+./Version 1/Copilot_20260119_193424.png
+./Version 1/ChatGPT Image Jan 19, 2026, 08_15_36 PM.png
+./Version 1/Copilot_20260118_001024.png
+./Version 1/Copilot_20260119_221024.png
+./Version 1/Copilot_20260121_025745.png
+./Version 1/Copilot_20260118_000340.png
+./Version 1/Copilot_20260119_213207.png
+./Version 1/mercwar01_new_Technology.png
+./Version 1/Copilot_20260119_203721.png
+./Version 1/Copilot_20260119_215940.png
+./Version 1/Copilot_20260117_234159.png
+./Version 1/Readme.md
+./Version 1/Copilot_20260118_000033.png
+./Version 1/Copilot_20260119_213850.png
+./Version 1/Copilot_20260117_222308.png
+./Version 1/Copilot_20260117_222304.png
+./Version 1/Demonizer-CVBGOD-Cyborg.png
+./Version 1/Demonizer-Cyborg.png
+./Version 1/Copilot_20260119_220231.png
+./Version 1/Copilot_20260118_001025.png
+./Version 1/Copilot_20260119_221026.png
+./Version 1/Copilot_20260119_213210.png
+./Version 1/Copilot_20260118_001629.png
+./Version 1/Copilot_20260117_215204.png
+./Version 1/ChatGPT Image Jan 19, 2026, 07_46_42 PM.png
+./Version 1/ChatGPT Image Jan 19, 2026, 07_43_39 PM.png
+./Version 1/Copilot_20260119_221021.png
+./Version 1/Copilot_20260118_000909.png
+./Version 1/Copilot_20260119_221033.png
+./Version 1/Copilot_20260119_221032.png
+./Version 1/Copilot_20260117_222247.png
+./Version 1/Copilot_20260119_213217.png
+./Version 1/Copilot_20260118_002247.png
+./Version 1/Copilot_20260118_002249.png
+./Version 1/Copilot_20260119_194018.png
+./Version 1/ChatGPT Image Jan 19, 2026, 08_11_45 PM.png
+./Version 1/Copilot_20260117_222234.png
+./Version 1/Copilot_20260118_000912.png
+./Version 1/Copilot_20260118_000338.png
+./Version 1/Copilot_20260119_221022.png
+./Version 1/Copilot_20260119_213158.png
+./CONTRIBUTING.md
+./google77a4b19e8f99751c.html
+./CITATION.cff
+./README.md
+./AIFVS-HEADER.txt
+./LICENSE
