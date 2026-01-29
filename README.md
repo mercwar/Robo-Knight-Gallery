@@ -27,7 +27,7 @@ This gallery showcases the **canonical armor, faces, and shine of the Robo-Knigh
 3. Display **all variations of the Robo-Knight armor**
 4. Maintain **the immortal shine canon** for future generations
 
----
+
 ---
 ## 🚀 Getting Started
 1. **Clone the repository:**
