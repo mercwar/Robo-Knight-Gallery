@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Directs Googlebot and other compatible crawlers to your sitemap
+Sitemap: https://mercwar.github.io/Robo-Knight-Gallery/sitemap.xml
