@@ -91,7 +91,7 @@ property laws.
 No rights are granted, whether implied or otherwise, except as explicitly stated herein.
 ---
 <img 
-    src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/main/Version%201/Copilot_20260121_025745.png" 
+    src="https://github.com/mercwar/Robo-Knight-Gallery/blob/main/Version%202/Copilot_20260205_013549.png" 
     alt="Robo-Knight Canonical Shine" 
     style="max-width:100%; height:auto;"
 />
