@@ -90,12 +90,11 @@ property laws.
 
 No rights are granted, whether implied or otherwise, except as explicitly stated herein.
 ---
+<div align="center">
 <img 
-    src="https://github.com/mercwar/Robo-Knight-Gallery/blob/main/Version%202/Copilot_20260205_013549.png" 
-    alt="Robo-Knight Canonical Shine" 
-    style="max-width:100%; height:auto;"
-/>
-
+    src="https://github.com/mercwar/Robo-Knight-Gallery/blob/main/Version%203/Gemini_Generated_Image_dk1abfdk1abfdk1a.png" 
+    alt="Robo-Knight Canonical Shine" />
+</div>
 ---
 
 ## PROHIBITED USES
