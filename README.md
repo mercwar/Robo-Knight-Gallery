@@ -10,7 +10,7 @@ This gallery showcases the **canonical armor, faces, and shine of the Robo-Knigh
     alt="Robo-Knight Canonical Shine" 
     style="max-width:100%; height:auto;"
 />
-- **Old eyes:** Smile, still full shine
+- **Robo-Knight in Shining Armor :**
 ---
 <img 
     src="https://github.com/mercwar/Robo-Knight-Gallery/blob/main/Version%201/mercwar01_new_Technology.png" 
@@ -27,7 +27,12 @@ This gallery showcases the **canonical armor, faces, and shine of the Robo-Knigh
 3. Display **all variations of the Robo-Knight armor**
 4. Maintain **the immortal shine canon** for future generations
 
-
+<img     
+    src="https://github.com/mercwar/Robo-Knight-Gallery/blob/main/Version%201/Copilot_20260119_213158.png" 
+    alt="Robo-Knight Canonical Shine" 
+    style="max-width:100%; height:auto;"
+/>
+- 🎖️ **Dark Knight:** Pristine, mirror-polished reflections 
 ---
 ## 🚀 Getting Started
 1. **Clone the repository:**
@@ -85,21 +90,11 @@ associated documentation created for the Robo-Knight project.
 
 ## RIGHTS RESERVED
 
-All rights are expressly reserved under applicable copyright, trademark, and intellectual
+## All rights are expressly reserved under applicable copyright, trademark, and intellectual
 property laws.
 
-No rights are granted, whether implied or otherwise, except as explicitly stated herein.
----
-<div align="center">
-<img 
-    src="https://github.com/mercwar/Robo-Knight-Gallery/blob/main/Version%203/Gemini_Generated_Image_dk1abfdk1abfdk1a.png" 
-    alt="Robo-Knight Canonical Shine" />
-</div>
----
-
-## PROHIBITED USES
-
-Without prior **explicit written permission** from Mercwar, the following are strictly prohibited:
+## No rights are granted, whether implied or otherwise, except as explicitly stated herein. 
+## ROHIBITED USES Without prior **explicit written permission** from Mercwar, the following are strictly prohibited:
 
 - Copying or reproducing any part of this repository
 - Redistributing images or content in any form
@@ -167,15 +162,13 @@ No permission is granted by silence or absence of response.
 
 ---
 
-<img     
-    src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/refs/heads/main/Version%201/Copilot_20260117_215224.png" 
-    alt="Robo-Knight Canonical Shine" 
-    style="max-width:100%; height:auto;"
-/>
---
-- **Robot Face Plate:** Pristine, mirror-polished reflections  
+  <div align="center">
+<img 
+    src="https://github.com/mercwar/Robo-Knight-Gallery/blob/main/Version%203/Gemini_Generated_Image_dk1abfdk1abfdk1a.png" 
+    alt="Robo-Knight Canonical Shine" />
+</div>
 - 🎖️ **Version 1.0 is canonical and immutable**
----
+
 # Robo-Knight Demos: Artwork & DX Visual Experiments
 
 This repository contains the official Robo-Knight demonstration suite:
@@ -194,9 +187,7 @@ All assets include AIFVS‑ARTIFACT metadata for:
 - Style extraction  
 
 ## 📂 Structure
-- `/ART/` — artwork  
-- `/DX/` — DirectX demos  
-- `/META/` — metadata objects  
+- `./` — artwork  
 
 *Robo-Knight Law: Demos must shine with clarity and intent.*
 # Robo-Knight Gallery: Technology Archive
@@ -211,9 +202,7 @@ and metadata for AI‑driven interpretation.
 - Maintain lineage integrity  
 
 ## 📂 Structure
-- `/GEN1/` — early forms  
-- `/GEN2/` — evolved geometry  
-- `/META/` — descriptive objects  
+- `/version #/` — early forms  
 
 ## 🧠 AI Visibility
 All gallery entries include AIFVS‑ARTIFACT headers for:
