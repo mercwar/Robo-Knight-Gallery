@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Robo‑Knight GitHub Portal</title>
+
+<style>
+    body {
+        background: #0a0a0a;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #1e90ff;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .link-btn {
+        display: block;
+        width: 260px;
+        margin: 20px auto;
+        padding: 12px;
+        background: #1e90ff;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.2s;
+    }
+
+    .link-btn:hover {
+        background: #63b3ff;
+        transform: scale(1.05);
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .gallery img {
+        width: 100%;
+        border: 2px solid #1e90ff;
+        border-radius: 6px;
+        background: #111;
+    }
+
+    .file-name {
+        text-align: center;
+        margin-top: 6px;
+        font-size: 14px;
+        color: #ccc;
+    }
+</style>
+
+<script>
+// Auto-list images in the GitHub repo folder
+async function loadImages() {
+    const repo = "mercwar/Robo-Knight-Demos"; // <-- CHANGE THIS TO YOUR REPO
+    const folder = ""; // root folder of repo
+
+    const apiUrl = `https://api.github.com/repos/${repo}/contents/${folder}`;
+    const response = await fetch(apiUrl);
+    const files = await response.json();
+
+    const gallery = document.getElementById("gallery");
+
+    files.forEach(file => {
+        if (file.name.match(/\.(png|jpg|jpeg|gif|webp|bmp)$/i)) {
+            const div = document.createElement("div");
+
+            div.innerHTML = `
+                <img src="${file.download_url}" alt="${file.name}">
+                <div class="file-name">${file.name}</div>
+            `;
+
+            gallery.appendChild(div);
+        }
+    });
+}
+
+window.onload = loadImages;
+</script>
+
+</head>
+<body>
+
+<h1>Robo‑Knight GitHub Image Browser</h1>
+
+<a class="link-btn" href="https://mercwar01.byethost3.com/RK-AOL/home.php" target="_blank">
+    Enter RK‑AOL System
+</a>
+
+<div id="gallery" class="gallery"></div>
+
+</body>
+</html>
