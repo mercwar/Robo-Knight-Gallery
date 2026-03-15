@@ -53,7 +53,13 @@ This is the ** AI-generated Robo-Knight face and armor shine **:
 - **Creative Status:** Robo‑Knight is a protected creative work
   ---
 ## 📂 Suggested Structure for Gallery
-version 1
+Prototype
+Version 1
+Version 2
+Version 3
+Version 4
+Version #
+...
 --
 # COPYRIGHT NOTICE
 
@@ -94,7 +100,7 @@ associated documentation created for the Robo-Knight project.
 property laws.
 
 ## No rights are granted, whether implied or otherwise, except as explicitly stated herein. 
-## ROHIBITED USES Without prior **explicit written permission** from Mercwar, the following are strictly prohibited:
+## PROHIBITED USES Without prior **explicit written permission** from Mercwar, the following are strictly prohibited:
 
 - Copying or reproducing any part of this repository
 - Redistributing images or content in any form
