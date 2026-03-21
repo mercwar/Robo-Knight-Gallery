@@ -1,0 +1,189 @@
+/* ===== BODY & DESKTOP ===== */
+body {
+    margin: 0;
+    background: radial-gradient(circle at top, #111 0%, #000 70%);
+    font-family: Segoe UI, Tahoma, sans-serif;
+    color: #f5d76e;
+    overflow: hidden;
+}
+
+#desktop { 
+    width: 100vw; 
+    height: 100vh; 
+    position: relative; 
+}
+
+/* ===== WINDOWS ===== */
+/* ===== WINDOWS ===== */
+.window {
+    position: absolute;
+    width: 480px;
+    max-width: 80vw;
+    height: auto;      /* allow height to adjust */
+    max-height: 80vh;
+    background: linear-gradient(#1a1a1a, #050505);
+    border: 2px solid #c9a227;
+    box-shadow: 0 0 18px rgba(201,162,39,.5), 6px 6px #000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* only outer scrollbars */
+}
+
+
+
+.window.viewer-window {
+    width: 80vw;
+    height: 80vh;
+}
+
+/* ===== TITLEBAR ===== */
+.titlebar {
+    background: linear-gradient(90deg, #3a2f0b, #c9a227, #3a2f0b);
+    color: #000;
+    padding: 6px 10px;
+    font-weight: bold;
+    cursor: move;
+    user-select: none;
+    box-shadow: inset 0 -2px 4px rgba(0,0,0,0.3);
+    border-bottom: 1px solid #7a6318;
+}
+
+/* ===== WINDOW CONTENT ===== */
+.content {
+    padding: 10px 15px;
+    background: #000;       /* dark windows */
+    color: #ffd700;
+    flex: 1;                /* fill space */
+    overflow: auto;
+    min-height: 0;          /* required for flex scrolling */
+    scrollbar-width: thin;
+    scrollbar-color: #c9a227 #000;
+}
+
+/* Scrollbars for Chrome/Edge/Safari */
+.content::-webkit-scrollbar {
+    width: 10px;
+}
+.content::-webkit-scrollbar-track {
+    background: #000;
+}
+.content::-webkit-scrollbar-thumb {
+    background: #c9a227;
+    border: 2px solid #3a2f0b;
+    border-radius: 4px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #000;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-top: 1px solid #7a6318;
+    color: #9a822f;
+}
+
+/* ===== DIRECTORY ENTRIES ===== */
+.entry { 
+    display: flex; 
+    align-items: center; 
+    padding: 6px 8px; 
+    cursor: pointer; 
+    border-bottom: 1px solid #1f1a08; 
+}
+
+.entry:hover { 
+    background: linear-gradient(90deg,#2b2208,#5a470f); 
+}
+
+.icon { 
+    width: 26px; 
+    text-align: center; 
+    margin-right: 8px; 
+}
+
+/* ===== HTML IFRAME ===== */
+.html-frame {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ===== MARKDOWN VIEWER ===== */
+.content.md-viewer {
+    background: #ffffff;
+    color: #000;
+    padding: 20px;
+    line-height: 1.5;
+    font-size: 14px;
+    overflow: auto;       /* outer scroll only */
+    word-wrap: break-word;
+    white-space: normal;  /* normal wrap for markdown */
+    scrollbar-width: thin;
+    scrollbar-color: #c9a227 #f0f0f0;
+}
+
+.content.md-viewer::-webkit-scrollbar {
+    width: 10px;
+}
+
+.content.md-viewer::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+.content.md-viewer::-webkit-scrollbar-thumb {
+    background: #c9a227;
+    border: 2px solid #d4af37;
+}
+
+/* Markdown inner wrapper */
+.md-inner {
+    padding: 10px 20px 30px 40px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+    background: #ffffff;
+    word-wrap: break-word;
+    white-space: normal; /* wrap text */
+    overflow: visible;   /* prevent inner scrollbars */
+}
+
+
+
+.md-inner a { color: #c9a227; text-decoration: underline; }
+.md-inner a:hover { color: #f5d76e; }
+
+/* ===== CONTENT (DIRECTORY & VIEWER) ===== */
+.content, .viewer {
+    flex: 1;
+    overflow: auto;       /* only outer scrollbars */
+    padding: 10px 15px;
+    background: #000;
+    color: #ffd700;
+    word-wrap: break-word; /* wrap long lines */
+    white-space: pre-wrap; /* wrap preformatted text */
+    scrollbar-width: thin;
+    scrollbar-color: #c9a227 #000;
+}
+
+/* Scrollbars for all windows */
+.content::-webkit-scrollbar,
+.viewer::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.content::-webkit-scrollbar-track,
+.viewer::-webkit-scrollbar-track {
+    background: #000;
+}
+
+.content::-webkit-scrollbar-thumb,
+.viewer::-webkit-scrollbar-thumb {
+    background: #c9a227;
+    border: 2px solid #3a2f0b;
+    border-radius: 4px;
+}
+
+
