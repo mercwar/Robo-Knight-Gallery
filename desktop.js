@@ -1,6 +1,6 @@
 // ===== CONFIG =====
 const owner = "mercwar";
-const repo  = "NEXUS";
+const repo  = "Robo-Knight-Gallery";
 
 let zIndexTop = 10;
 let offset = 30;
