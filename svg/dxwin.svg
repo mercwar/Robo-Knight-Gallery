@@ -196,7 +196,24 @@
         <circle cx="930" y="515" r="4" fill="#00ff99"/>
         <circle cx="1040" y="515" r="4" fill="#00f2ff"/>
 
-        <text x="395" y="535" fill="#e8e8e8">T-25m :: build.rku :: SUCCESS</text>
-        <text x="395" y="555" fill="#e8e8e8">T-18m :: test.rku :: SUCCESS</text>
-        <text x="395" y="575" fill="#e8e8e8">T-12m :: ship.rku :: SUCCESS</text>
-        <text x="395" y="595" fill="#ffdd55">T-09m :: law.check :: 2 WARN (shimmed
+
+        <!-- Labels -->
+        <text x="395" y="535" fill="#e8e8e8">
+            T-25m :: build.rku :: SUCCESS
+        </text>
+        <text x="395" y="555" fill="#e8e8e8">
+            T-18m :: test.rku :: SUCCESS
+        </text>
+        <text x="395" y="575" fill="#e8e8e8">
+            T-12m :: ship.rku :: SUCCESS
+        </text>
+        <text x="395" y="595" fill="#ffdd55">
+            T-09m :: law.check :: 2 WARN (shimmed)
+        </text>
+        <text x="395" y="555" fill="#00ff99">
+            T-04m :: observability.sync :: OK
+        </text>
+        <text x="395" y="575" fill="#00f2ff">
+            T-01m :: dx.snapshot :: CAPTURED
+        </text>
+    </g>
