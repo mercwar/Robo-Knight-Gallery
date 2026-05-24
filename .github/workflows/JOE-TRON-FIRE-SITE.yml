@@ -1,7 +1,7 @@
 # /* AVIS_COORD: AVIS://GITHUB/WORKFLOW/XML_GEN/1.0 */
 # /* ROLE: Automated XML Sentinel Dispatch */
 
-name: "JOE-TRON :: XML-SITEMAP-DISPATCH"
+name: "JOE-TRON :: FIRE-SITE-DISPATCH"
 
 on:
   push:
