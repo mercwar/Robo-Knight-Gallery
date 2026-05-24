@@ -1,17 +1,48 @@
+/* ===== GRID VIEWER (REBUILT WITH CORRECT MERCWAR BG) ===== */
+
 body {
     margin: 0;
-    background: #000;
+    background-color: #000;
     color: #f5d76e;
     font-family: Segoe UI, Tahoma, sans-serif;
+
+    background-image: url("https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/main/Version%206/image_aad2ef73.png");
+    background-size: contain;      /* full image always visible */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
 
 header {
     padding: 10px 15px;
-    background: linear-gradient(90deg,#3a2f0b,#c9a227,#3a2f0b);
+    background-image: url("https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/main/Version%206/Gemini_Generated_Image_o4qyabo4qyabo4qy.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     color: #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+background: linear-gradient(
+    90deg,
+    rgba(58,47,11,0.05),
+    rgba(201,162,39,0.05),
+    rgba(58,47,11,0.05)
+);
+
+    pointer-events: none;
+}
+
+header {
+    position: relative;
+    overflow: hidden;
 }
 
 #versionBar button {
