@@ -6,8 +6,8 @@ body {
     color: #f5d76e;
     font-family: Segoe UI, Tahoma, sans-serif;
 
-    background-image: url("https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/main/Version%206/image_aad2ef73.png");
-    background-size: contain;      /* full image always visible */
+    background-image: url("https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/main/Version%206/image_3afc355.png");
+    background-size: cover;      /* full image always visible */
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -110,4 +110,80 @@ main {
     max-width: 90vw;
     max-height: 90vh;
     border: 2px solid #c9a227;
+}
+h1 {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    /* HOLO FONT */
+    background: linear-gradient(90deg, #aef, #6ff, #aef);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* STAR GLOW */
+    text-shadow:
+        0 0 6px rgba(0,255,255,0.6),
+        0 0 14px rgba(0,150,255,0.4),
+        0 0 26px rgba(0,120,255,0.35);
+
+    /* MAIN HOLO SEQUENCE */
+    animation: holoSequence 12s ease-in-out infinite;
+}
+
+/* ===== HOLO SEQUENCE ===== */
+@keyframes holoSequence {
+
+    /* 0–40%: perfectly sharp */
+    0% {
+        filter: blur(0px);
+        opacity: 1;
+        transform: translateX(0);
+        text-shadow:
+            0 0 6px rgba(0,255,255,0.6),
+            0 0 14px rgba(0,150,255,0.4);
+    }
+    40% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+
+    /* 40–55%: blur + fade out */
+    55% {
+        filter: blur(8px);
+        opacity: 0.1;
+    }
+
+    /* 55–60%: BLIP OUT */
+    60% {
+        filter: blur(12px);
+        opacity: 0;
+        text-shadow: 0 0 40px rgba(255,255,255,1);
+    }
+
+    /* 60–70%: RAINBOW PULSE */
+    70% {
+        opacity: 0;
+        filter: blur(0px);
+        text-shadow:
+            0 0 20px rgba(255,0,0,0.9),
+            0 0 40px rgba(0,255,0,0.9),
+            0 0 60px rgba(0,128,255,0.9);
+    }
+
+    /* 70–100%: SWIPE BACK IN */
+    80% {
+        opacity: 1;
+        transform: translateX(-40px);
+        filter: blur(2px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0px);
+        text-shadow:
+            0 0 6px rgba(0,255,255,0.6),
+            0 0 14px rgba(0,150,255,0.4);
+    }
 }
