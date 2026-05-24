@@ -1,4 +1,5 @@
-### 🔓 [Click Here](https://mercwar.github.io/Robo-Knight-Gallery/index.html) to view CVBGOD's Robo-Knights
+### 🔓 <a href="https://mercwar.github.io/Robo-Knight-Gallery/index.html" target="_blank">Click Here</a> to view CVBGOD's Robo-Knights
+
 ---
 ##### Welcome to the **official Robo-Knight Gallery**!  
 This gallery showcases the **canonical armor, faces, and shine of the Robo-Knight project**.
