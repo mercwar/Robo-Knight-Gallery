@@ -1,13 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>CYBORG Desktop — Robo Knight Gold</title>
-<link rel="stylesheet" href="window.css">
-<script src="marked.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Robo Knight Gallery – Grid</title>
+  <link rel="stylesheet" href="index.css">
+  <!-- ===== AVIS / CONSTELLATION META CORE ===== -->
+<meta name="meta" content="AVIS-CONSTELLATION">
+<meta name="ACK" content="core,system,viewer,rru,avis26">
+<meta name="AVIS" content="protocol=26; layer=frontend; mode=viewer">
+<meta name="CONSTELLATION" content="engine=active; index=enabled; backend=github">
+<meta name="RRU" content="compat=true; theme=cyborg-blackglass">
+<meta name="VERSION" content="dynamic; source=github; filter=Version*">
+<meta name="IMAGES" content="types=jpg,jpeg,png,webp,gif,bmp; mode=thumb+viewer">
+<meta name="WINDOWS" content="os=Cyborg-Desktop; stacking=front; draggable=true">
+<meta name="AUTHOR" content="Demon + Copilot">
+
 </head>
 <body>
-<div id="desktop"></div>
-<script src="desktop.js"></script>
+  <header>
+    <h1>Robo Knight Gallery</h1>
+    <div id="versionBar"></div>
+  </header>
+
+  <main>
+    <div id="grid"></div>
+    <div id="pager">
+      <button id="prevBtn">Prev</button>
+      <span id="pageInfo"></span>
+      <button id="nextBtn">Next</button>
+    </div>
+  </main>
+
+  <div id="lightbox">
+    <div id="lightboxInner">
+      <img id="lbImg">
+    </div>
+  </div>
+
+  <script src="index.js"></script>
 </body>
 </html>

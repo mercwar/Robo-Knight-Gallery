@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    background: #000;
+    color: #f5d76e;
+    font-family: Segoe UI, Tahoma, sans-serif;
+}
+
+header {
+    padding: 10px 15px;
+    background: linear-gradient(90deg,#3a2f0b,#c9a227,#3a2f0b);
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#versionBar button {
+    margin-left: 6px;
+    padding: 4px 8px;
+    border: 1px solid #c9a227;
+    background: #000;
+    color: #f5d76e;
+    cursor: pointer;
+}
+
+#versionBar button.active {
+    background: #c9a227;
+    color: #000;
+}
+
+main {
+    padding: 10px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 160px);
+    gap: 10px;
+}
+
+.thumb {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border: 2px solid #c9a227;
+    cursor: pointer;
+}
+
+#pager {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#pager button {
+    padding: 4px 10px;
+    margin: 0 5px;
+    border: 1px solid #c9a227;
+    background: #111;
+    color: #f5d76e;
+    cursor: pointer;
+}
+
+#pager button:hover {
+    background: #c9a227;
+    color: #000;
+}
+
+/* Lightbox */
+#lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#lightboxInner img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border: 2px solid #c9a227;
+}
