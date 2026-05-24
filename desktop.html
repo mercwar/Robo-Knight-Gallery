@@ -3,31 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>CYBORG Desktop – Robo Knight</title>
-  <link rel="stylesheet" href="desktop.css">
+  <link rel="stylesheet" href="desktop.css?v=4">
 </head>
 
 <body>
 
-  <!-- TOP PAD (stretches header area) -->
-  <div id="top_pad"></div>
 
-  <!-- DESKTOP HEADER (matches grid viewer style) -->
+
+  <!-- DESKTOP HEADER -->
   <header>
-      <h1>Robo‑Knight Desktop</h1>
-      <div id="desktopInfo"></div>
+   <div id="desktop"></div>
+
+    
   </header>
-
+    <h1>Robo‑Knight Desktop</h1>
+      <div id="desktopInfo"></div>
   <!-- DESKTOP AREA -->
-  <div id="desktop"></div>
-
+ 
   <!-- TASKBAR -->
   <div id="taskbar">
-    <button id="startBtn" class="holoBtn">AVIS</button>
-    <div id="taskInfo">RRU / Desktop Shell</div>
-	<button id="slideBtn" class="holoBtn">SLIDEX</button>
 
+      <!-- CYBORG BUTTON -->
+      <button id="startBtn" class="holoBtn">Cyborg</button>
+
+      <!-- AVIS BUTTON (NO BLUE OUTLINE, NO NESTED BUTTONS) -->
+      <button id="avisBtn" class="holoBtn" onclick="location.href='index.html'">
+          AVIS
+      </button>
+
+      <div id="taskInfo">RRU / Desktop Shell</div>
   </div>
 
-  <script src="desktop.js"></script>
+  <script src="desktop.js?v=4"></script>
 </body>
 </html>

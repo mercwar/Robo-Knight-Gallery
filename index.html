@@ -3,44 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <title>Robo Knight Gallery – Grid</title>
-  <link rel="stylesheet" href="index.css?v=2">
-  <!-- ===== AVIS / CONSTELLATION META CORE ===== -->
-<meta name="meta" content="AVIS-CONSTELLATION">
-<meta name="ACK" content="core,system,viewer,rru,avis26">
-<meta name="AVIS" content="protocol=26; layer=frontend; mode=viewer">
-<meta name="CONSTELLATION" content="engine=active; index=enabled; backend=github">
-<meta name="RRU" content="compat=true; theme=cyborg-blackglass">
-<meta name="VERSION" content="dynamic; source=github; filter=Version*">
-<meta name="IMAGES" content="types=jpg,jpeg,png,webp,gif,bmp; mode=thumb+viewer">
-<meta name="WINDOWS" content="os=Cyborg-Desktop; stacking=front; draggable=true">
-<meta name="AUTHOR" content="Demon + Copilot">
+  <link rel="stylesheet" href="index.css?v=5">
 
+  <!-- ===== AVIS / CONSTELLATION META CORE ===== -->
+  <meta name="meta" content="AVIS-CONSTELLATION">
+  <meta name="ACK" content="core,system,viewer,rru,avis26">
+  <meta name="AVIS" content="protocol=26; layer=frontend; mode=viewer">
+  <meta name="CONSTELLATION" content="engine=active; index=enabled; backend=github">
+  <meta name="RRU" content="compat=true; theme=cyborg-blackglass">
+  <meta name="VERSION" content="dynamic; source=github; filter=Version*">
+  <meta name="IMAGES" content="types=jpg,jpeg,png,webp,gif,bmp; mode=thumb+viewer">
+  <meta name="WINDOWS" content="os=Cyborg-Desktop; stacking=front; draggable=true">
+  <meta name="AUTHOR" content="Demon + Copilot">
 </head>
+
 <body>
 
-<header>
-    <div id="top_pad"></div>
-    <h1>Robo Knight Gallery</h1>
-    <div id="versionBar"></div>
-	<button id="startBtn" class="holoBtn">AVIS</button>
 
+   
+
+    <!-- VERSION BAR (Viewer + Desktop + Slidex) -->
+	<header>
+
+
+    <!-- GRID LAYOUT FOR HEADER -->
+
+        <!-- BOTTOM‑LEFT CENTER: AVIS BUTTON -->
+      
+            <button id="avisBtn" class="holoBtn" onclick="location.href='desktop.html'">
+                AVIS
+            </button>
+        <!-- TOP‑LEFT: VERSION BAR -->
+        <div style="grid-column: 1; grid-row: 1; text-align: left;">
+            <div id="versionBar">
+
+            </div>
+        </div>
+
+   
+
+      
+
+        <!-- BOTTOM‑RIGHT CENTER: BLUE TEXT -->
+ <h1>Robo Knight Gallery</h1>
+
+   
+
+    <div id="top_pad"></div>
 </header>
 
-  <main>
+
+
+
+<main>
     <div id="grid"></div>
+
     <div id="pager">
-      <button id="prevBtn">Prev</button>
-      <span id="pageInfo"></span>
-      <button id="nextBtn">Next</button>
+        <button id="prevBtn">Prev</button>
+        <span id="pageInfo"></span>
+        <button id="nextBtn">Next</button>
     </div>
-  </main>
+</main>
 
-  <div id="lightbox">
+<!-- LIGHTBOX -->
+<div id="lightbox">
     <div id="lightboxInner">
-      <img id="lbImg">
+        <img id="lbImg">
     </div>
-  </div>
+</div>
 
-  <script src="index.js?v=2"></script>
+<!-- ACTIVE PAGE HIGHLIGHT -->
+<script>
+    const path = location.pathname.toLowerCase();
+    if (path.includes("desktop")) {
+        document.getElementById("desktopLink")?.classList.add("active");
+    } else if (path.includes("slidex")) {
+        document.getElementById("slidexLink")?.classList.add("active");
+    } else {
+        document.getElementById("viewerLink")?.classList.add("active");
+    }
+</script>
+
+<script src="index.js?v=4"></script>
 </body>
 </html>
