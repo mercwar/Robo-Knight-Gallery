@@ -1,4 +1,4 @@
-### 🔓 <a href="https://mercwar.github.io/Robo-Knight-Gallery/index.html" target="_blank">Click Here</a> to view CVBGOD's Robo-Knights
+### 🔓 <a href="https://mercwar.github.io/Robo-Knight-Gallery/index.html" target="_blank" rel="noopener noreferrer">Click Here</a> to view CVBGOD's Robo-Knights
 
 ---
 ##### Welcome to the **official Robo-Knight Gallery**!  
