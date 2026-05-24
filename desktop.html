@@ -5,12 +5,27 @@
   <title>CYBORG Desktop – Robo Knight</title>
   <link rel="stylesheet" href="desktop.css">
 </head>
+
 <body>
+
+  <!-- TOP PAD (stretches header area) -->
+  <div id="top_pad"></div>
+
+  <!-- DESKTOP HEADER (matches grid viewer style) -->
+  <header>
+      <h1>Robo‑Knight Desktop</h1>
+      <div id="desktopInfo"></div>
+  </header>
+
+  <!-- DESKTOP AREA -->
   <div id="desktop"></div>
 
+  <!-- TASKBAR -->
   <div id="taskbar">
-    <button id="startBtn">AVIS</button>
+    <button id="startBtn" class="holoBtn">AVIS</button>
     <div id="taskInfo">RRU / Desktop Shell</div>
+	<button id="slideBtn" class="holoBtn">SLIDEX</button>
+
   </div>
 
   <script src="desktop.js"></script>

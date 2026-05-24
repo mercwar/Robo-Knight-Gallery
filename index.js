@@ -6,7 +6,7 @@ const imageExts   = ["jpg","jpeg","png","gif","webp","bmp"];
 let currentVersion = null;
 let files = [];
 let page  = 1;
-const pageSize = 12;
+const pageSize = 7;   // ONLY SHOW 7 IMAGES
 
 function ghList(path=""){
     const url = `https://api.github.com/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
@@ -21,7 +21,7 @@ function isImageFile(name){
 function isVersionDir(name){
     const m = /^Version\s+(\d+)$/i.exec(name);
     if(!m) return false;
-    const n = parseInt(m[1],10);
+    const n = parseInt(m[1], 10);
     return n >= 1 && n <= maxVersions;
 }
 

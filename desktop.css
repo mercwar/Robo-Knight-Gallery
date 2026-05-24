@@ -2,35 +2,59 @@
 
 body {
     margin: 0;
-    background: #000;
-    font-family: Segoe UI, Tahoma, sans-serif;
+    background-color: #000;
     color: #f5d76e;
-    overflow: hidden;
+    font-family: Segoe UI, Tahoma, sans-serif;
+
+    background-image: url("https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/main/Version%206/Gemini_Generated_Image_o4qyabo4qyabo4qy.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-#desktop {
-    width: 100vw;
-    height: 100%;
+/* ===== TOP PAD (stretches header area) ===== */
+#top_pad {
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 
+    height: 300px;        /* REAL top padding */
+    pointer-events: none;
+    background: transparent;
+    z-index: 0;
+}
 
+/* ===== DESKTOP WALLPAPER ===== */
+#desktop {
+    position: absolute;
+    top: 300px;           /* sits BELOW the top pad */
+    left: 0;
+    right: 0;
+    bottom: 32px;         /* leaves room for taskbar */
+
+    background-image: url("https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/main/Version%206/image_3afc355.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/* Taskbar */
+/* ===== TASKBAR ===== */
 #taskbar {
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
     height: 32px;
+
     background: linear-gradient(#111, #000);
     border-top: 1px solid #333;
+
     display: flex;
     align-items: center;
     padding: 0 8px;
+    z-index: 9999;
 }
 
 #startBtn {
@@ -52,15 +76,17 @@ body {
     color: #c9a227;
 }
 
-/* Windows */
+/* ===== WINDOWS ===== */
 .window {
     position: absolute;
     width: 480px;
     max-width: 80vw;
     max-height: 80vh;
+
     background: linear-gradient(#1a1a1a, #050505);
     border: 2px solid #c9a227;
     box-shadow: 0 0 18px rgba(201,162,39,.5), 6px 6px #000;
+
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -93,7 +119,7 @@ body {
     color: #9a822f;
 }
 
-/* Entries */
+/* ===== ENTRIES ===== */
 .entry {
     display: flex;
     align-items: center;
@@ -112,7 +138,7 @@ body {
     margin-right: 8px;
 }
 
-/* Thumbs + viewer */
+/* ===== THUMBS + VIEWER ===== */
 .thumb {
     width: 120px;
     height: 120px;
@@ -127,4 +153,123 @@ body {
     max-height: 100%;
     border: 2px solid #c9a227;
     box-shadow: 0 0 20px #000;
+}
+/* ===== HOLO GLOW A TAG ===== */
+
+a {
+    position: relative;
+    color: #aef;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    padding: 4px 10px;
+    border-radius: 4px;
+
+    background: rgba(0,0,0,0.25);
+    border: 1px solid rgba(0,255,255,0.25);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    transition: all 0.25s ease-out;
+}
+
+/* Glow on hover */
+a:hover {
+    color: #fff;
+    border-color: #00eaff;
+    box-shadow: 0 0 12px rgba(0,255,255,0.7);
+}
+
+/* Shine sweep */
+a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 80%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.35),
+        transparent
+    );
+
+    transform: skewX(-25deg);
+    transition: 0.45s;
+}
+
+a:hover::before {
+    left: 120%;
+}
+
+/* Click flash */
+a:active {
+    box-shadow: 0 0 25px rgba(0,255,255,1);
+    transform: scale(0.96);
+}
+/* ===== HOLO GLASS BUTTON (STABLE) ===== */
+
+.holoBtn {
+    position: relative;
+    display: inline-block;
+
+    padding: 4px 12px; /* 25% smaller */
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #f5d76e;
+    background: rgba(0,0,0,0.35);
+    border: 1px solid rgba(201,162,39,0.45);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    cursor: pointer;
+    overflow: hidden; /* FIXES LEFT BLEED */
+    border-radius: 4px;
+
+    transition: all 0.2s ease-out;
+}
+
+/* Hover glow */
+.holoBtn:hover {
+    border-color: #f5d76e;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(245,215,110,0.6);
+}
+
+/* Shine sweep — FIXED so it stays inside the button */
+.holoBtn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* FIXED: no left bleed */
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.35),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+    transition: left 0.45s ease-out;
+}
+
+.holoBtn:hover::before {
+    left: 100%; /* stays inside button */
+}
+
+/* Click flash */
+.holoBtn:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 18px rgba(255,215,110,1);
 }
