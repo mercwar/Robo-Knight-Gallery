@@ -38,20 +38,23 @@
 <header>
 
 <script>
-// Detect if the page is inside an iframe
-const in_a_frame = (window.self !== window.top);
+function openPortal() {
+    const in_a_frame = (window.self !== window.top);
 
-// Choose the correct portal URL
-const portal_tron = in_a_frame
-  ? "https://mercwar.github.io/Robo-Knight-Gallery/index.html"
-  : "https://mercwar01.byethost3.com/index.php?AVIS-FRAME=RKG";
+    const portal_tron = in_a_frame
+        ? "https://mercwar.github.io/Robo-Knight-Gallery/index.html"
+        : "https://mercwar01.byethost3.com/index.php?AVIS-FRAME=RKG";
+
+    // 🔥 ALWAYS break out of iframe
+    window.top.location.href = portal_tron;
+}
 </script>
 
 <!-- AVIS BUTTON -->
 <button class="holoBtn" id="avisBtn" onclick="location.href='desktop.html'">AVIS</button>
 
 <!-- PORTAL BUTTON -->
-<button class="holoBtn" id="port" onclick="location.href=portal_tron">Portal</button>
+<button class="holoBtn" id="port"  onclick="openPortal()">Portal</button>
 
 <!-- TITLE -->
 <h1>Robo Knight Gallery</h1>
