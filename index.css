@@ -213,26 +213,26 @@ main {
 }
 
 #grid {
-    margin-top: 20px;
+    position: fixed;
+    bottom: 110px; 
+    left: 50%;    /* center horizontally */
+    transform: translateX(-50%); /* correct centering */
+
+    width: 700px; /* your chosen width */
+
     display: flex;
-
-    /* NEVER wrap */
-    flex-wrap: nowrap;
-
-    /* ALWAYS scroll horizontally */
-    overflow-x: auto;
-
-    /* NEVER vertical scroll inside grid */
-    overflow-y: hidden;
-
-    /* CENTER the entire row */
     justify-content: center;
+    align-items: center;
 
-    /* KEEP thumbs tight */
-    gap: 0;
+    padding: 10px 0;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 
-    padding-bottom: 10px;
+    border-top: 1px solid rgba(201,162,39,0.35);
+    z-index: 9998;
 }
+
 
 
 #grid .thumb {
@@ -257,9 +257,24 @@ main {
 }
 
 #pager {
-  margin-top: 10px;
-  text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 0;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    border-top: 1px solid rgba(201,162,39,0.35);
+    z-index: 9999;
 }
+
 
 #pager button {
   padding: 4px 10px;
