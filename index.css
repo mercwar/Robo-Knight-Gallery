@@ -31,8 +31,8 @@ html, body {
   background-repeat: no-repeat;
   background-position: top center;
   border: 1px solid rgba(201,162,39,0.35);
-  box-shadow: 0 0 20px rgba(0,255,255,0.25);
-  border-radius: 8px;
+  box-shadow: 0 0 2px rgba(0,255,255,0.25);
+  border-radius: 1px;
 }
 
 /* ============================================================
@@ -101,6 +101,7 @@ html, body {
 header {
     position: relative;
     top: 120px;
+	
     width: 100%;
     text-align: left;
     z-index: 10;
@@ -108,7 +109,7 @@ header {
 
 /* 4. FIX AVIS BUTTON POSITION */
 #avisBtn {
-	margin-left:300px;
+	margin-left:270px;
     
     position: relative !important;
     z-index: 9999 !important;
