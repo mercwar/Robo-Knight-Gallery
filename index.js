@@ -6,7 +6,7 @@ const imageExts   = ["jpg","jpeg","png","gif","webp","bmp"];
 let currentVersion = null;
 let files = [];
 let page  = 1;
-const pageSize = 7;   // ONLY SHOW 7 IMAGES
+const pageSize = 5;   // ONLY SHOW 7 IMAGES
 
 function ghList(path=""){
     const url = `https://api.github.com/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
