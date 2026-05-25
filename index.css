@@ -128,3 +128,29 @@ main {
     text-align: center;
     z-index: 10;
 }
+/* ===== WEBKIT (Chrome, Edge, Safari, Opera) ===== */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c9a227; /* Matches your gold theme tint */
+    border-radius: 5px;
+    border: 2px solid #000000; /* Creates a clean gap effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #f5d76e; /* Bright gold on hover */
+}
+
+/* ===== FIREFOX ===== */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #c9a227 #000000; /* thumb | track */
+}
+
