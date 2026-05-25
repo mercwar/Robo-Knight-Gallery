@@ -25,9 +25,10 @@
   <div class="divider" id="topDivider">
   
  <div id="versionBar"></div>
- 
+ <a id="jump_scroll"></a>
       <!-- PAGINATION -->
       <div id="pager">
+	  
         <button id="prevBtn">Prev</button>
         
         <button id="nextBtn">Next</button>
@@ -81,6 +82,47 @@ function openPortal() {
   <div id="bottomDivider"></div>
 
   <script src="index.js?v=8"></script>
+<script>
+window.addEventListener("load", () => {
+    const anchor = document.getElementById("jump_scroll");
+    if (!anchor) return;
+
+    // 1. Scroll to anchor
+    anchor.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+    // 2. Track scroll until it stops moving
+    let lastPos = -1;
+    let sameCount = 0;
+
+    function trackScroll() {
+        const currentPos = window.scrollY;
+
+        // If scroll position hasn't changed for 3 checks → scrolling is done
+        if (currentPos === lastPos) {
+            sameCount++;
+            if (sameCount >= 3) {
+                // 3. Now scroll further down
+                window.scrollBy({
+                    top: 140,
+                    behavior: "smooth"
+                });
+                return; // stop tracking
+            }
+        } else {
+            sameCount = 0; // reset if movement detected
+        }
+
+        lastPos = currentPos;
+        requestAnimationFrame(trackScroll);
+    }
+
+    requestAnimationFrame(trackScroll);
+});
+</script>
+
 
 </body>
 </html>

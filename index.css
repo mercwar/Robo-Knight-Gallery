@@ -106,7 +106,9 @@ header {
     text-align: left;
     z-index: 10;
 }
-
+#jump_scroll{
+	
+}
 /* 4. FIX AVIS BUTTON POSITION */
 #avisBtn {
 	margin-left:270px;
