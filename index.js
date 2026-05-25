@@ -84,7 +84,7 @@ function renderGrid(){
     });
 
     const totalPages = Math.max(1, Math.ceil(files.length/pageSize));
-    document.getElementById("pageInfo").textContent = `Page ${page} of ${totalPages}`;
+    document.getElementById("pageInfo").textContent = `${page} OF ${totalPages}`;
 }
 
 function openLightbox(src){

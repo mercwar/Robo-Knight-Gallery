@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Robo Knight Gallery – Grid</title>
-  <link rel="stylesheet" href="index.css?v=8">
+
+  <link rel="stylesheet" href="index.css?v=11">
+  <link rel="stylesheet" href="ui.css?v=11">
 
   <!-- ===== AVIS / CONSTELLATION META CORE ===== -->
   <meta name="meta" content="AVIS-CONSTELLATION">
@@ -19,71 +21,52 @@
 
 <body>
 
-
+  <!-- WRAPPER DIVIDER -->
+  <div class="divider" id="topDivider">
+  
+ <div id="versionBar"></div>
+ 
+      <!-- PAGINATION -->
+      <div id="pager">
+        <button id="prevBtn">Prev</button>
+        
+        <button id="nextBtn">Next</button>
+		<span id="pageInfo"></span>
+      </div>
+    <!-- VERSION BAR -->
    
 
-    <!-- VERSION BAR (Viewer + Desktop + Slidex) -->
-	<header>
+    <header>
+
+      <!-- AVIS BUTTON -->
+      <button id="avisBtn" class="holoBtn" onclick="location.href='desktop.html'">AVIS</button>
+
+      <!-- TITLE -->
+      <h1>Robo Knight Gallery</h1>
 
 
-    <!-- GRID LAYOUT FOR HEADER -->
+    </header>
 
-        <!-- BOTTOM‑LEFT CENTER: AVIS BUTTON -->
-      
-            <button id="avisBtn" class="holoBtn" onclick="location.href='desktop.html'">
-                AVIS
-            </button>
-        <!-- TOP‑LEFT: VERSION BAR -->
-        <div style="grid-column: 1; grid-row: 1; text-align: left;">
-            <div id="versionBar">
+ 
 
-            </div>
-        </div>
+  <main>
 
-    <h1>Robo Knight Gallery</h1>
+    <!-- LIGHTBOX -->
+    <div id="lightbox">
+      <div id="lightboxInner">
+        <img id="lbImg" alt="">
+      </div>
+    </div>
 
-      
-
-        <!-- BOTTOM‑RIGHT CENTER: BLUE TEXT -->
-
-
-   
-
-    <div id="top_pad"></div>
-</header>
-
-
-
-
-<main>
+    <!-- IMAGE GRID -->
     <div id="grid"></div>
 
-    <div id="pager">
-        <button id="prevBtn">Prev</button>
-        <span id="pageInfo"></span>
-        <button id="nextBtn">Next</button>
-    </div>
-</main>
+  </main>
+ </div>
+  <!-- BOTTOM DIVIDER -->
+  <div id="bottomDivider"></div>
 
-<!-- LIGHTBOX -->
-<div id="lightbox">
-    <div id="lightboxInner">
-        <img id="lbImg">
-    </div>
-</div>
+  <script src="index.js?v=8"></script>
 
-<!-- ACTIVE PAGE HIGHLIGHT -->
-<script>
-    const path = location.pathname.toLowerCase();
-    if (path.includes("desktop")) {
-        document.getElementById("desktopLink")?.classList.add("active");
-    } else if (path.includes("slidex")) {
-        document.getElementById("slidexLink")?.classList.add("active");
-    } else {
-        document.getElementById("viewerLink")?.classList.add("active");
-    }
-</script>
-
-<script src="index.js?v=6"></script>
 </body>
 </html>
