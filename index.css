@@ -2,7 +2,7 @@ header {
   position: relative;
   overflow: hidden;
   padding: 10px 15px;
-  padding-top: 500px;
+  padding-top: 400px;
   background-image: url("https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/main/Version%206/Gemini_Generated_Image_o4qyabo4qyabo4qy.png");
   background-size: cover;
   background-position: center;
@@ -257,7 +257,7 @@ main {
 }
 
 #pager {
-  margin-top: 50px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -291,7 +291,8 @@ main {
 }
 
 h1 {
-  padding-left: 250px;
+  padding-left: 350px;
+margin-bottom:100px;
   font-family: "Segoe UI", Tahoma, sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
