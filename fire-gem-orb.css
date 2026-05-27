@@ -6,7 +6,7 @@ html, body {
     margin: 0;
     height: 100%;
     background: radial-gradient(circle at center, #050308 0%, #020106 40%, #000000 100%);
-    overflow: hidden;
+    
     perspective: 1200px;
 }
 
