@@ -1,52 +1,56 @@
-
-   /* 
+/* 
   avis fire-gem-orb.css
-  */
+*/
   
-  html, body {
-        margin: 0;
-        height: 100%;
-        background: radial-gradient(circle at center, #050308 0%, #020106 40%, #000000 100%);
-        overflow: hidden;
-        perspective: 1200px; /* Deep 3D depth field for electron shell passes */
-    }
+html, body {
+    margin: 0;
+    height: 100%;
+    background: radial-gradient(circle at center, #050308 0%, #020106 40%, #000000 100%);
+    overflow: hidden;
+    perspective: 1200px;
+}
 
-    .scene {
-		
-        position: fixed;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform-style: preserve-3d;
-    }
+/* FIXED → RELATIVE (iframe-safe) */
+/* flex → block (prevents viewport centering override) */
+.scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: block;
+}
 
-    /* ============================================================
-       ATOMIC NUCLEUS (FIREBALL CORE WITH HIGH FREQUENCY HUM)
-       ============================================================ */
-    .fireball {
-        position: relative;
-        /* Core centered by removing the broken offset coordinates */
-	left: -336px; 
-        top: 37px;  
-        width: 45px;   
-        height: 45px;  
-        border-radius: 50%;
-        opacity: .45; /* Boosted to give the nucleus a solid physical mass */
-        background: radial-gradient(circle, #ffffff 0%, #ff9800 40%, #ff5722 70%, #7a1b00 100%);
-        box-shadow:
-            0 0 20px #ff9800, 
-            0 0 40px #ff5722,
-            0 0 80px rgba(255,180,0,0.6);
-        transform-style: preserve-3d;
-        animation: nucleusVibration 0.3s ease-in-out infinite alternate;
-    }
+/* ============================================================
+   ATOMIC NUCLEUS (FIREBALL CORE)
+============================================================ */
+.fireball {
+    position: absolute;
+    left: 118px;
+    top: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    opacity: .45;
+    background: radial-gradient(circle, #ffffff 0%, #ff9800 40%, #ff5722 70%, #7a1b00 100%);
+    box-shadow:
+        0 0 20px #ff9800, 
+        0 0 40px #ff5722,
+        0 0 80px rgba(255,180,0,0.6);
+    transform-style: preserve-3d;
+    animation: nucleusVibration 0.3s ease-in-out infinite alternate;
+}
+
+/* ============================================================
+   ATOM ORBITS — FIXED ALIGNMENT (NO VIEWPORT CALC)
+============================================================ */
+
+
 .atom-orbit {
     position: absolute;
 
-    /* PERFECT CENTER ALIGNMENT WITH FIREBALL (mathematically locked) */
-    left: calc(50% - 421px);
-    top: calc(50% - 60.5px);
+    /* PERFECT CENTER ALIGNMENT WITH FIREBALL */
+    left: 55px;
+    top: -61px;
 
     opacity: .45;
     width: 170px;
@@ -58,124 +62,112 @@
 }
 
 
-    @keyframes nucleusVibration {
-        0%   { transform: scale(0.96) translate(0.5px, -0.5px); }
-        100% { transform: scale(1.04) translate(-0.5px, 0.5px); }
-    }
+@keyframes nucleusVibration {
+    0%   { transform: scale(0.96) translate(0.5px, -0.5px); }
+    100% { transform: scale(1.04) translate(-0.5px, 0.5px); }
+}
 
-    /* ============================================================
-       QUANTUM ATOMIC TRACKS & RIG MECHANICAL ENGINE
-       ============================================================ */
+/* ============================================================
+   QUANTUM ATOMIC TRACKS & RIG MECHANICAL ENGINE
+============================================================ */
 
+.orbit-1 { transform: rotateX(75deg) rotateY(25deg); }
+.orbit-1 .spin-rig { animation: atomicSpin 1.4s linear infinite; }
 
-    /* Orbit Shell 1 - Tilted sharply forward and right */
-    .orbit-1 { transform: rotateX(75deg) rotateY(25deg); }
-    .orbit-1 .spin-rig { animation: atomicSpin 1.4s linear infinite; }
+.orbit-2 { transform: rotateX(60deg) rotateY(-40deg); border-color: rgba(189, 0, 255, 0.08); }
+.orbit-2 .spin-rig { animation: atomicSpinReverse 2.0s linear infinite; }
 
-    /* Orbit Shell 2 - Crossed transverse axis tilt */
-    .orbit-2 { transform: rotateX(60deg) rotateY(-40deg); border-color: rgba(189, 0, 255, 0.08); }
-    .orbit-2 .spin-rig { animation: atomicSpinReverse 2.0s linear infinite; }
+.orbit-3 { transform: rotateX(20deg) rotateY(70deg); border-color: rgba(0, 255, 102, 0.08); }
+.orbit-3 .spin-rig { animation: atomicSpin 1.7s linear infinite; }
 
-    /* Orbit Shell 3 - Near vertical polar orbit */
-    .orbit-3 { transform: rotateX(20deg) rotateY(70deg); border-color: rgba(0, 255, 102, 0.08); }
-    .orbit-3 .spin-rig { animation: atomicSpin 1.7s linear infinite; }
+.spin-rig {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
 
-    /* Internal rig layer isolates flat rotation from the global 3D tilts */
-    .spin-rig {
-        width: 100%;
-        height: 100%;
-        transform-style: preserve-3d;
-    }
+@keyframes atomicSpin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
-    @keyframes atomicSpin {
-        0%   { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
+@keyframes atomicSpinReverse {
+    0%   { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
 
-    @keyframes atomicSpinReverse {
-        0%   { transform: rotate(360deg); }
-        100% { transform: rotate(0deg); }
-    }
+/* ============================================================
+   ELECTRON PARTICLE ASSETS
+============================================================ */
+.electron {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
 
-    /* ============================================================
-       ELECTRON PARTICLE ASSETS
-       ============================================================ */
-    .electron {
-        position: absolute;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        /* Snaps the particle's physical pixel mass dead center onto the ring path */
-        transform: translate(-50%, -50%); 
-    }
-	
-	
-    /* Track coordinate positions */
-    .pos-top    { top: 0; left: 50%; }
-    .pos-bottom { bottom: 0; left: 50%; }
-    .pos-left   { left: 0; top: 50%; }
-    .pos-right  { right: 0; top: 50%; }
+.pos-top    { top: 0; left: 50%; }
+.pos-bottom { bottom: 0; left: 50%; }
+.pos-left   { left: 0; top: 50%; }
+.pos-right  { right: 0; top: 50%; }
 
-    /* Electron Color Assignments and Power Glows */
-    .orbit-1 .electron {
-        background: #ffff00;
-        box-shadow: 0 0 12px #00f3ff, 0 0 20px #ffffff;
-    }
-    .orbit-2 .electron {
-        background: #ffff00;
-        box-shadow: 0 0 12px #bd00ff, 0 0 20px #ffffff;
-    }
-    .orbit-3 .electron {
-        background: #ffff00;
-        box-shadow: 0 0 12px #00ff66, 0 0 20px #ffffff;
-    }
+.orbit-1 .electron {
+    background: #ffff00;
+    box-shadow: 0 0 12px #00f3ff, 0 0 20px #ffffff;
+}
+.orbit-2 .electron {
+    background: #ffff00;
+    box-shadow: 0 0 12px #bd00ff, 0 0 20px #ffffff;
+}
+.orbit-3 .electron {
+    background: #ffff00;
+    box-shadow: 0 0 12px #00ff66, 0 0 20px #ffffff;
+}
 
-    /* ============================================================
-       RK‑RING ENGINE (STAGGERED SEQUENTIAL FX)
-       ============================================================ */
-    .fireball::before,
-    .fireball::after,
-    .fireball .rk-ring3 {
-        content: "";
-        position: absolute;
-        top: 0;         
-        left: 0;        
-        width: 100%;    
-        height: 100%;   
-        box-sizing: border-box; 
-        border-radius: 50%;
-        pointer-events: none;
-        opacity: 0;
-    }
+/* ============================================================
+   RK‑RING ENGINE
+============================================================ */
+.fireball::before,
+.fireball::after,
+.fireball .rk-ring3 {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+}
 
-    /* Ring 1 - White Hot Ignition Burst */
-    .fireball::before {
-        animation: rkRing1 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-    }
+.fireball::before {
+    animation: rkRing1 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
 
-    /* Ring 2 - Mid-Tier Orange Plasma Wave */
-    .fireball::after {
-        animation: rkRing2 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-        animation-delay: 0.6s;
-    }
+.fireball::after {
+    animation: rkRing2 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+    animation-delay: 0.6s;
+}
 
-    /* Ring 3 - Outer Deep Crimson Dispersion */
-    .fireball .rk-ring3 {
-        animation: rkRing3 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-        animation-delay: 1.2s;
-    }
+.fireball .rk-ring3 {
+    animation: rkRing3 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+    animation-delay: 1.2s;
+}
 
-    @keyframes rkRing1 {
-        0%   { transform: scale(1);   opacity: 0.9; box-shadow: 0 0 6px #ffffff; }
-        100% { transform: scale(2.5); opacity: 0;   box-shadow: 0 0 25px #ff9800; }
-    }
+@keyframes rkRing1 {
+    0%   { transform: scale(1);   opacity: 0.9; box-shadow: 0 0 6px #ffffff; }
+    100% { transform: scale(2.5); opacity: 0;   box-shadow: 0 0 25px #ff9800; }
+}
 
-    @keyframes rkRing2 {
-        0%   { transform: scale(1);   opacity: 0.8; box-shadow: 0 0 6px #ff9800; }
-        100% { transform: scale(3.3); opacity: 0;   box-shadow: 0 0 30px #ff5722; }
-    }
+@keyframes rkRing2 {
+    0%   { transform: scale(1);   opacity: 0.8; box-shadow: 0 0 6px #ff9800; }
+    100% { transform: scale(3.3); opacity: 0;   box-shadow: 0 0 30px #ff5722; }
+}
 
-    @keyframes rkRing3 {
-        0%   { transform: scale(1);   opacity: 0.7; box-shadow: 0 0 6px #ff5722; }
-        100% { transform: scale(4.2); opacity: 0;   box-shadow: 0 0 40px #7a1b00; }
-    }
+@keyframes rkRing3 {
+    0%   { transform: scale(1);   opacity: 0.7; box-shadow: 0 0 6px #ff5722; }
+    100% { transform: scale(4.2); opacity: 0;   box-shadow: 0 0 40px #7a1b00; }
+}

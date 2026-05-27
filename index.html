@@ -6,7 +6,8 @@
 
   <link rel="stylesheet" href="index.css?v=11">
   <link rel="stylesheet" href="ui.css?v=11">
-<link rel="stylesheet" href="fire-gem-orb.css?v=11">
+  <link rel="stylesheet" href="fire-gem-orb.css?v=11">
+
   <!-- ===== AVIS / CONSTELLATION META CORE ===== -->
   <meta name="meta" content="AVIS-CONSTELLATION">
   <meta name="ACK" content="core,system,viewer,rru,avis26">
@@ -26,7 +27,6 @@ function openPortal() {
         ? "https://mercwar.github.io/Robo-Knight-Gallery/index.html"
         : "https://mercwar01.byethost3.com/index.php?AVIS-FRAME=RKG";
 
-    // 🔥 ALWAYS break out of iframe
     window.top.location.href = portal_tron;
 }
 </script>
@@ -37,74 +37,72 @@ function openPortal() {
   <!-- WRAPPER DIVIDER -->
   <div class="divider" id="topDivider">
   
- <div id="versionBar"></div>
- <a id="jump_scroll"></a>
-      <!-- PAGINATION -->
-      <div id="pager">
-	  
+    <div id="versionBar"></div>
+    <a id="jump_scroll"></a>
+
+    <!-- PAGINATION -->
+    <div id="pager">
         <button id="prevBtn">Prev</button>
-        
         <button id="nextBtn">Next</button>
-		<span id="pageInfo"></span>
-      </div>
-    <!-- VERSION BAR -->
-   
+        <span id="pageInfo"></span>
+    </div>
+
 <header>
 
-
+<!-- ⭐ FIXED: Atom system now has a true center anchor -->
 <div class="scene">
+    <div class="quantum-system-center">
 
-    <!-- NEW: Neon Oval Rings -->
-    <div class="neon-orbit-rig">
-        <div class="neon-oval neon-blue"></div>
-        <div class="neon-oval neon-purple"></div>
-    </div>
-
-    <!-- Shell 1 -->
-    <div class="atom-orbit orbit-1">
-        <div class="spin-rig">
-            <div class="electron pos-top"></div>
-            <div class="electron pos-bottom"></div>
+        <!-- Neon Rings -->
+        <div class="neon-orbit-rig">
+            <div class="neon-oval neon-blue"></div>
+            <div class="neon-oval neon-purple"></div>
         </div>
-    </div>
 
-    <!-- Shell 2 -->
-    <div class="atom-orbit orbit-2">
-        <div class="spin-rig">
-            <div class="electron pos-left"></div>
-            <div class="electron pos-right"></div>
+        <!-- Shell 1 -->
+        <div class="atom-orbit orbit-1">
+            <div class="spin-rig">
+                <div class="electron pos-top"></div>
+                <div class="electron pos-bottom"></div>
+            </div>
         </div>
-    </div>
 
-    <!-- Shell 3 -->
-    <div class="atom-orbit orbit-3">
-        <div class="spin-rig">
-            <div class="electron pos-top"></div>
-            <div class="electron pos-bottom"></div>
+        <!-- Shell 2 -->
+        <div class="atom-orbit orbit-2">
+            <div class="spin-rig">
+                <div class="electron pos-left"></div>
+                <div class="electron pos-right"></div>
+            </div>
         </div>
-    </div>
 
-    <!-- Nucleus -->
-    <div class="fireball">
-        <div class="rk-ring3"></div>
-    </div>
+        <!-- Shell 3 -->
+        <div class="atom-orbit orbit-3">
+            <div class="spin-rig">
+                <div class="electron pos-top"></div>
+                <div class="electron pos-bottom"></div>
+            </div>
+        </div>
 
+        <!-- Nucleus -->
+        <div class="fireball">
+            <div class="rk-ring3"></div>
+        </div>
+
+    </div>
 </div>
 
 <!-- AVIS BUTTON -->
 <button class="holoBtn" id="avisBtn" onclick="location.href='desktop.html'">AVIS</button>
 
 <!-- PORTAL BUTTON -->
-<button class="holoBtn" id="port"  onclick="openPortal()">Portal</button>
+<button class="holoBtn" id="port" onclick="openPortal()">Portal</button>
 
 <!-- TITLE -->
 <h1>Robo Knight Gallery</h1>
 
 </header>
 
- 
-
-  <main>
+<main>
 
     <!-- LIGHTBOX -->
     <div id="lightbox">
@@ -116,43 +114,42 @@ function openPortal() {
     <!-- IMAGE GRID -->
     <div id="grid"></div>
 
-  </main>
- </div>
-  <!-- BOTTOM DIVIDER -->
-  <div id="bottomDivider"></div>
+</main>
 
-  <script src="index.js?v=8"></script>
+</div>
+
+<!-- BOTTOM DIVIDER -->
+<div id="bottomDivider"></div>
+
+<script src="index.js?v=8"></script>
+
 <script>
 window.addEventListener("load", () => {
     const anchor = document.getElementById("jump_scroll");
     if (!anchor) return;
 
-    // 1. Scroll to anchor
     anchor.scrollIntoView({
         behavior: "smooth",
         block: "start"
     });
 
-    // 2. Track scroll until it stops moving
     let lastPos = -1;
     let sameCount = 0;
 
     function trackScroll() {
         const currentPos = window.scrollY;
 
-        // If scroll position hasn't changed for 3 checks → scrolling is done
         if (currentPos === lastPos) {
             sameCount++;
             if (sameCount >= 3) {
-                // 3. Now scroll further down
                 window.scrollBy({
                     top: 140,
                     behavior: "smooth"
                 });
-                return; // stop tracking
+                return;
             }
         } else {
-            sameCount = 0; // reset if movement detected
+            sameCount = 0;
         }
 
         lastPos = currentPos;
@@ -162,7 +159,6 @@ window.addEventListener("load", () => {
     requestAnimationFrame(trackScroll);
 });
 </script>
-
 
 </body>
 </html>
