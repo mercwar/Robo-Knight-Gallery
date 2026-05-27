@@ -1,14 +1,7 @@
 /* 
   avis fire-gem-orb.css
 */
-  
-html, body {
-    margin: 0;
-    height: 100%;
-    background: radial-gradient(circle at center, #050308 0%, #020106 40%, #000000 100%);
-    
-    perspective: 1200px;
-}
+
 
 /* FIXED → RELATIVE (iframe-safe) */
 /* flex → block (prevents viewport centering override) */
