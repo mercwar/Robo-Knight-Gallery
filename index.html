@@ -6,7 +6,7 @@
 
   <link rel="stylesheet" href="index.css?v=11">
   <link rel="stylesheet" href="ui.css?v=11">
-
+<link rel="stylesheet" href="fire-gem-orb.css?v=11">
   <!-- ===== AVIS / CONSTELLATION META CORE ===== -->
   <meta name="meta" content="AVIS-CONSTELLATION">
   <meta name="ACK" content="core,system,viewer,rru,avis26">
@@ -17,6 +17,19 @@
   <meta name="IMAGES" content="types=jpg,jpeg,png,webp,gif,bmp; mode=thumb+viewer">
   <meta name="WINDOWS" content="os=Cyborg-Desktop; stacking=front; draggable=true">
   <meta name="AUTHOR" content="Demon + Copilot">
+
+<script>
+function openPortal() {
+    const in_a_frame = (window.self !== window.top);
+
+    const portal_tron = in_a_frame
+        ? "https://mercwar.github.io/Robo-Knight-Gallery/index.html"
+        : "https://mercwar01.byethost3.com/index.php?AVIS-FRAME=RKG";
+
+    // 🔥 ALWAYS break out of iframe
+    window.top.location.href = portal_tron;
+}
+</script>
 </head>
 
 <body>
@@ -38,18 +51,45 @@
    
 <header>
 
-<script>
-function openPortal() {
-    const in_a_frame = (window.self !== window.top);
 
-    const portal_tron = in_a_frame
-        ? "https://mercwar.github.io/Robo-Knight-Gallery/index.html"
-        : "https://mercwar01.byethost3.com/index.php?AVIS-FRAME=RKG";
+<div class="scene">
 
-    // 🔥 ALWAYS break out of iframe
-    window.top.location.href = portal_tron;
-}
-</script>
+    <!-- NEW: Neon Oval Rings -->
+    <div class="neon-orbit-rig">
+        <div class="neon-oval neon-blue"></div>
+        <div class="neon-oval neon-purple"></div>
+    </div>
+
+    <!-- Shell 1 -->
+    <div class="atom-orbit orbit-1">
+        <div class="spin-rig">
+            <div class="electron pos-top"></div>
+            <div class="electron pos-bottom"></div>
+        </div>
+    </div>
+
+    <!-- Shell 2 -->
+    <div class="atom-orbit orbit-2">
+        <div class="spin-rig">
+            <div class="electron pos-left"></div>
+            <div class="electron pos-right"></div>
+        </div>
+    </div>
+
+    <!-- Shell 3 -->
+    <div class="atom-orbit orbit-3">
+        <div class="spin-rig">
+            <div class="electron pos-top"></div>
+            <div class="electron pos-bottom"></div>
+        </div>
+    </div>
+
+    <!-- Nucleus -->
+    <div class="fireball">
+        <div class="rk-ring3"></div>
+    </div>
+
+</div>
 
 <!-- AVIS BUTTON -->
 <button class="holoBtn" id="avisBtn" onclick="location.href='desktop.html'">AVIS</button>
