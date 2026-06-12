@@ -1,0 +1,58 @@
+name: Fire-Gem AVIS Engine
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '*/15 * * * *'  # Pulse every 15 minutes [AUTONOMOUS]
+  workflow_dispatch:        # Manual override preserved
+
+jobs:
+  avis-ignition:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout Root
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Install unzip
+        run: sudo apt-get update && sudo apt-get install -y unzip
+
+      # 3️⃣ MATERIALIZE: Matching the physical file: CYHY-CMT.zip
+      - name: Materialize Beacon
+        run: |
+          if [ -f "Version_8.zip" ]; then
+            # Extract to current workspace (.) so git can see the files
+            unzip -o "Version_8.zip" -d "./Version 8"
+            echo "BASH: [ACK] Scroll extracted inside workspace."
+          else
+            echo "BASH: [NACK] CYHY-CMT not found at $GITHUB_WORKSPACE"
+            ls -R
+            exit 1
+          fi
+
+      # 4️⃣ PORTAL SYNC: Push the actual extracted data
+      - name: Commit Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Use dot to add only the real files inside the repository
+          git add .
+
+          if ! git diff --staged --quiet; then
+            git commit -m "AVIS: Beacon Materialized [Pulse]"
+            # Rebase to keep autonomous sync clean
+            git pull --rebase -X ours origin main 
+            git push origin main
+            echo "wm_macro_ack: Portal Sync Successful."
+          else
+            echo "AVIS: No changes detected."
+          fi
