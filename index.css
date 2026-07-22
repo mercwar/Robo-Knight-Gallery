@@ -39,35 +39,41 @@ html, body {
    🔥 FINAL AVIS CONTROL FIX — SMALL THUMBS + NO SCROLLBAR HELL
 ============================================================ */
 
-/* 1. FIX THE GRID — STOP FORCED HORIZONTAL STRIP */
+/* ============================================================
+   GRID PATCH — FIX HEIGHT + INTERNAL SCROLL
+============================================================ */
 #grid {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    overflow: visible !important;
-    justify-content: center !important;
-    gap: 10px !important;
-    padding: 10px !important;
-    max-width: 900px !important;
-    margin: 20px auto !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    max-width: 900px;
+    margin: 20px auto;
+
+    /* 🔧 Critical fix */
+    max-height: 140px;       /* lock grid height */
+    overflow-y: auto;        /* vertical scroll inside grid */
+    overflow-x: hidden;      /* prevent horizontal scrollbar */
 }
 
-/* 2. REAL SMALL THUMBNAILS — GUARANTEED */
+/* Thumbnails remain small and neat */
 .thumb {
-    width: 90px !important;
-    height: 90px !important;
-    object-fit: cover !important;
-    border: 1px solid #c9a227 !important;
-    border-radius: 4px !important;
-    cursor: pointer !important;
-    flex: 0 0 auto !important;
-    transition: transform .2s ease-out, box-shadow .2s ease-out !important;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border: 1px solid #c9a227;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 0 0 auto;
+    transition: transform .2s ease-out, box-shadow .2s ease-out;
 }
 
-/* 3. HOVER EFFECT */
 .thumb:hover {
-    transform: scale(1.08) !important;
-    box-shadow: 0 0 10px rgba(0,255,255,0.6) !important;
+    transform: scale(1.08);
+    box-shadow: 0 0 10px rgba(0,255,255,0.6);
 }
+
 
 
 /* ============================================================
@@ -106,9 +112,11 @@ header {
     text-align: left;
     z-index: 10;
 }
+
 #jump_scroll{
-	
+
 }
+
 /* 4. FIX AVIS BUTTON POSITION */
 #avisBtn {
 	margin-left:270px;

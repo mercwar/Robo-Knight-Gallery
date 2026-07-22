@@ -8,10 +8,15 @@
   // Generates "YYYY-MM-DD"
   const d = new Date();
   const v = d.toISOString().split('T')[0]; 
+ // document.write(``);
+
   document.write(`<link rel="stylesheet" href="index.css?v=${v}">`);
-  document.write(`<link rel="stylesheet" href="ui.css?v=${v}">`);
+    document.write(`<link rel="stylesheet" href="ui.css?v=${v}">`);
   document.write(`<link rel="stylesheet" href="fire-gem-orb.css?v=${v}">`);
 </script>
+
+
+
   <!-- ===== AVIS / CONSTELLATION META CORE ===== -->
   <meta name="meta" content="AVIS-CONSTELLATION">
   <meta name="ACK" content="core,system,viewer,rru,avis26">
@@ -22,7 +27,7 @@
   <meta name="IMAGES" content="types=jpg,jpeg,png,webp,gif,bmp; mode=thumb+viewer">
   <meta name="WINDOWS" content="os=Cyborg-Desktop; stacking=front; draggable=true">
   <meta name="AUTHOR" content="Demon + Copilot">
-<link rel="icon" type="image/x-icon" href="<?= $site_url; ?>/favicon.ico">
+<link rel="icon" type="image/x-icon" href="<?= $site_url; ?>/favi-con.ico">
 <script>
 function openPortal() {
     const in_a_frame = (window.self !== window.top);
@@ -125,16 +130,11 @@ function openPortal() {
 <!-- BOTTOM DIVIDER -->
 <div id="bottomDivider"></div>
 
-<script src="index.js?v=8"></script>
+<script src="index.js?v=9"></script>
 
 <script>
 window.addEventListener("load", () => {
-    // If the splash is inside an iframe, target its document instead of window
-    const iframe = document.getElementById("rk-frame-splash"); // adjust to your splash iframe id
-    const doc = iframe ? iframe.contentWindow : window;
-
-    const anchor = (iframe ? iframe.contentDocument.getElementById("jump_scroll")
-                           : document.getElementById("jump_scroll"));
+    const anchor = document.getElementById("jump_scroll");
     if (!anchor) return;
 
     anchor.scrollIntoView({
@@ -146,33 +146,28 @@ window.addEventListener("load", () => {
     let sameCount = 0;
 
     function trackScroll() {
-        const currentPos = doc.scrollY;
+        const currentPos = window.scrollY;
 
         if (currentPos === lastPos) {
             sameCount++;
             if (sameCount >= 3) {
-                doc.scrollBy({
+                window.scrollBy({
                     top: 140,
                     behavior: "smooth"
                 });
-                sameCount = 0; // reset so it keeps nudging until bottom
+                return;
             }
         } else {
             sameCount = 0;
         }
 
         lastPos = currentPos;
-
-        // keep tracking until we reach the bottom
-        if (currentPos + doc.innerHeight < doc.document.body.scrollHeight) {
-            requestAnimationFrame(trackScroll);
-        }
+        requestAnimationFrame(trackScroll);
     }
 
     requestAnimationFrame(trackScroll);
 });
 </script>
-
 
 </body>
 </html>
