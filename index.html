@@ -4,16 +4,9 @@
   <meta charset="UTF-8">
   <title>Mercwar Robo Knight Gallery Grid</title>
 
-  <script>
-  // Generates "YYYY-MM-DD"
-  const d = new Date();
-  const v = d.toISOString().split('T')[0]; 
-
-  document.write(`<link rel="stylesheet" href="index.css?v=${v}">`);
-  document.write(`<link rel="stylesheet" href="ui.css?v=${v}">`);
-  document.write(`<link rel="stylesheet" href="fire-gem-orb.css?v=${v}">`);
-</script>
-
+<link rel="stylesheet" href="index.css?v=124">
+<link rel="stylesheet" href="ui.css?v=123">
+<link rel="stylesheet" href="fire-gem-orb.css?123">
   <!-- ===== AVIS / CONSTELLATION META CORE ===== -->
   <meta name="meta" content="AVIS-CONSTELLATION">
   <meta name="ACK" content="core,system,viewer,rru,avis26">
@@ -24,7 +17,7 @@
   <meta name="IMAGES" content="types=jpg,jpeg,png,webp,gif,bmp; mode=thumb+viewer">
   <meta name="WINDOWS" content="os=Cyborg-Desktop; stacking=front; draggable=true">
   <meta name="AUTHOR" content="Demon + Copilot">
-<link rel="icon" type="image/x-icon" href="<?= $site_url; ?>/favi-con.ico">
+<link rel="icon" type="image/x-icon" href="<?= $site_url; ?>/favicon.ico">
 <script>
 function openPortal() {
     const in_a_frame = (window.self !== window.top);
@@ -44,6 +37,7 @@ function openPortal() {
   <div class="divider" id="topDivider">
   
     <div id="versionBar"></div>
+    <a id="jump_scroll"></a>
 
     <!-- PAGINATION -->
     <div id="pager">
@@ -126,41 +120,43 @@ function openPortal() {
 <!-- BOTTOM DIVIDER -->
 <div id="bottomDivider"></div>
 
-<script src="index.js?v=9"></script>
+<script src="index.js?v=8"></script>
 
 <script>
-(function () {
-    const OFFSET = 170;
-    const TARGET_ID = "topDivider";
+window.addEventListener("load", () => {
+    const anchor = document.getElementById("jump_scroll");
+    if (!anchor) return;
 
-    window.addEventListener("load", () => {
+    anchor.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
 
-        // Don't auto-scroll inside an iframe.
-        if (window.self !== window.top) {
-            return;
-        }
+    let lastPos = -1;
+    let sameCount = 0;
 
-        // Wait until layout settles.
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
+    function trackScroll() {
+        const currentPos = window.scrollY;
 
-                const target = document.getElementById(TARGET_ID);
-                if (!target) return;
-
-                const y = target.getBoundingClientRect().top +
-                          window.pageYOffset +
-                          OFFSET;
-
-                window.scrollTo({
-                    top: y,
+        if (currentPos === lastPos) {
+            sameCount++;
+            if (sameCount >= 100) {
+                window.scrollBy({
+                    top: 136,
                     behavior: "smooth"
                 });
+                return;
+            }
+        } else {
+            sameCount = 0;
+        }
 
-            });
-        });
+        lastPos = currentPos;
+        requestAnimationFrame(trackScroll);
+    }
 
-    }, { once: true });
-})();
+    requestAnimationFrame(trackScroll);
+});
 </script>
 
 </body>
