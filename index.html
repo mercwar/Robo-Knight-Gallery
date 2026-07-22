@@ -129,53 +129,39 @@ function openPortal() {
 <script src="index.js?v=9"></script>
 
 <script>
-window.addEventListener("load", () => {
-    const container = document.getElementById("topDivider");
-    if (!container) return;
+(function () {
+    const OFFSET = 170;
+    const TARGET_ID = "topDivider";
 
-    // 1. Initiate primary scroll into view
-    container.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
+    window.addEventListener("load", () => {
 
-    let animationFrameId;
-    let stableCount = 0;
-    let lastPosition = window.scrollY;
-
-    // 2. Loop and wait for the initial scroll to complete stably
-    function verifyAndOffsetScroll() {
-        const currentPosition = window.scrollY;
-
-        // If the scroll position hasn't changed from the last frame, it is settling
-        if (currentPosition === lastPosition) {
-            stableCount++;
-            
-            // Once verified stable for 5 continuous frames, apply the final offset
-            if (stableCount >= 5) {
-                window.scrollBy({
-                    top: 170,
-                    behavior: "smooth"
-                });
-                
-                // CRITICAL FIX: Kill the loop completely so it never recurs or loops infinitely
-                cancelAnimationFrame(animationFrameId);
-                return;
-            }
-        } else {
-            // Reset counter if still actively moving to the initial anchor
-            stableCount = 0;
+        // Don't auto-scroll inside an iframe.
+        if (window.self !== window.top) {
+            return;
         }
 
-        lastPosition = currentPosition;
-        animationFrameId = requestAnimationFrame(verifyAndOffsetScroll);
-    }
+        // Wait until layout settles.
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
 
-    // Begin monitoring frame states
-    animationFrameId = requestAnimationFrame(verifyAndOffsetScroll);
-});
+                const target = document.getElementById(TARGET_ID);
+                if (!target) return;
+
+                const y = target.getBoundingClientRect().top +
+                          window.pageYOffset +
+                          OFFSET;
+
+                window.scrollTo({
+                    top: y,
+                    behavior: "smooth"
+                });
+
+            });
+        });
+
+    }, { once: true });
+})();
 </script>
-
 
 </body>
 </html>
