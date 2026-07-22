@@ -140,9 +140,9 @@ window.addEventListener("load", () => {
 
         if (currentPos === lastPos) {
             sameCount++;
-            if (sameCount >= 3000) {
+            if (sameCount >= 3) {
                 window.scrollBy({
-                    top: 170,
+                    top: 140,
                     behavior: "smooth"
                 });
                 return;
