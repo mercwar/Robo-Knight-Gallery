@@ -127,41 +127,37 @@ window.addEventListener("load", () => {
     const anchor = document.getElementById("jump_scroll");
     if (!anchor) return;
 
-    // First scroll into view
     anchor.scrollIntoView({
         behavior: "smooth",
         block: "start"
     });
 
     let lastPos = -1;
-    let stableCount = 0;
+    let sameCount = 0;
 
-    function validateScroll() {
+    function trackScroll() {
         const currentPos = window.scrollY;
 
         if (currentPos === lastPos) {
-            stableCount++;
-            // Require stability for ~20 frames (~300ms at 60fps)
-            if (stableCount >= 20) {
-                // Apply final offset once validated
+            sameCount++;
+            if (sameCount >= 3000) {
                 window.scrollBy({
-                    top: 136,
+                    top: 170,
                     behavior: "smooth"
                 });
-                return; // stop loop after final scroll
+                return;
             }
         } else {
-            stableCount = 0; // reset if movement detected
+            sameCount = 0;
         }
 
         lastPos = currentPos;
-        requestAnimationFrame(validateScroll);
+        requestAnimationFrame(trackScroll);
     }
 
-    requestAnimationFrame(validateScroll);
+    requestAnimationFrame(trackScroll);
 });
 </script>
-
 
 </body>
 </html>
