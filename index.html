@@ -8,14 +8,11 @@
   // Generates "YYYY-MM-DD"
   const d = new Date();
   const v = d.toISOString().split('T')[0]; 
- // document.write(``);
 
   document.write(`<link rel="stylesheet" href="index.css?v=${v}">`);
-    document.write(`<link rel="stylesheet" href="ui.css?v=${v}">`);
+  document.write(`<link rel="stylesheet" href="ui.css?v=${v}">`);
   document.write(`<link rel="stylesheet" href="fire-gem-orb.css?v=${v}">`);
 </script>
-
-
 
   <!-- ===== AVIS / CONSTELLATION META CORE ===== -->
   <meta name="meta" content="AVIS-CONSTELLATION">
@@ -47,7 +44,6 @@ function openPortal() {
   <div class="divider" id="topDivider">
   
     <div id="versionBar"></div>
-    <a id="jump_scroll"></a>
 
     <!-- PAGINATION -->
     <div id="pager">
@@ -134,40 +130,52 @@ function openPortal() {
 
 <script>
 window.addEventListener("load", () => {
-    const anchor = document.getElementById("jump_scroll");
-    if (!anchor) return;
+    const container = document.getElementById("topDivider");
+    if (!container) return;
 
-    anchor.scrollIntoView({
+    // 1. Initiate primary scroll into view
+    container.scrollIntoView({
         behavior: "smooth",
         block: "start"
     });
 
-    let lastPos = -1;
-    let sameCount = 0;
+    let animationFrameId;
+    let stableCount = 0;
+    let lastPosition = window.scrollY;
 
-    function trackScroll() {
-        const currentPos = window.scrollY;
+    // 2. Loop and wait for the initial scroll to complete stably
+    function verifyAndOffsetScroll() {
+        const currentPosition = window.scrollY;
 
-        if (currentPos === lastPos) {
-            sameCount++;
-            if (sameCount >= 3) {
+        // If the scroll position hasn't changed from the last frame, it is settling
+        if (currentPosition === lastPosition) {
+            stableCount++;
+            
+            // Once verified stable for 5 continuous frames, apply the final offset
+            if (stableCount >= 5) {
                 window.scrollBy({
-                    top: 140,
+                    top: 170,
                     behavior: "smooth"
                 });
+                
+                // CRITICAL FIX: Kill the loop completely so it never recurs or loops infinitely
+                cancelAnimationFrame(animationFrameId);
                 return;
             }
         } else {
-            sameCount = 0;
+            // Reset counter if still actively moving to the initial anchor
+            stableCount = 0;
         }
 
-        lastPos = currentPos;
-        requestAnimationFrame(trackScroll);
+        lastPosition = currentPosition;
+        animationFrameId = requestAnimationFrame(verifyAndOffsetScroll);
     }
 
-    requestAnimationFrame(trackScroll);
+    // Begin monitoring frame states
+    animationFrameId = requestAnimationFrame(verifyAndOffsetScroll);
 });
 </script>
+
 
 </body>
 </html>
